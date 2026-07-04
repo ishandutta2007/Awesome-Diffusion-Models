@@ -1,5 +1,9 @@
-# Awesome-Diffusion-Models
-## Diffusion Models in AI: History, Progression, Variants, & Applications
+<div align="center">
+<img src="assets/banner.svg" alt="Banner">
+</div>
+
+# 🌟 Awesome-Diffusion-Models 🌟
+## 🧠 Diffusion Models in AI: History, Progression, Variants, & Applications
 
 Denoising Diffusion Models (also known as Diffusion Probabilistic Models) represent a dominant class of generative artificial intelligence architectures capable of synthesizing high-fidelity images, videos, audio waveforms, and molecular structures [INDEX: 4]. Mathematically, these models operate by framing data generation as the reverse of a progressive noise injection process [INDEX: 4]. 
 
@@ -7,7 +11,7 @@ During the forward pass, a dataset sample is systematically degraded into pure G
 
 ---
 
-## 1. The Macro Chronological Evolution
+## 📜 1. The Macro Chronological Evolution
 
 The algorithmic progression of denoising diffusion models has transitioned from highly latent pixel-space math to compressed latent vectors, ordinary differential equation (ODE) straight lines, and scalable multi-modal transformers.
 
@@ -26,7 +30,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Mathematical Variants
+## 🔬 2. Core Functional & Mathematical Variants
 
 The Diffusion family tree features specialized mathematical core modifications designed to optimize sampling speed, manage probability paths, and enable non-Markovian generation.
 
@@ -38,7 +42,7 @@ The Diffusion family tree features specialized mathematical core modifications d
 
 ---
 
-## 3. Structural Sampling & Distillation Classes
+## ⚡ 3. Structural Sampling & Distillation Classes
 
 To deploy diffusion models within interactive, low-latency commercial applications, specialized distillation layers compress the multi-step sampling loop.
 
@@ -49,7 +53,7 @@ To deploy diffusion models within interactive, low-latency commercial applicatio
 
 ---
 
-## 4. Production Engineering Challenges & Hardware Solutions
+## 🛠️ 4. Production Engineering Challenges & Hardware Solutions
 
 Executing multi-step diffusion sampling loops across commercial cloud scales introduces severe memory-bus constraints and infrastructure processing bottlenecks.
 
@@ -60,7 +64,7 @@ Executing multi-step diffusion sampling loops across commercial cloud scales int
 
 ---
 
-## 5. Frontier Real-World AI Applications
+## 🚀 5. Frontier Real-World AI Applications
 
 | Application | Description | Year | Paper |
 | --- | --- | --- | --- |
@@ -70,7 +74,7 @@ Executing multi-step diffusion sampling loops across commercial cloud scales int
 
 ---
 
-## References
+## 📚 References
 1. Sohl-Dickstein, J., et al. (2015). Deep unsupervised learning using nonequilibrium thermodynamics. *International Conference on Machine Learning (ICML)*, 2256-2275 [INDEX: 4].
 2. Ho, J., Jain, A., & Abbeel, P. (2020). Denoising diffusion probabilistic models. *Advances in Neural Information Processing Systems (NeurIPS)*, 33, 6840-6880 [INDEX: 4].
 3. Song, J., Meng, C., & Ermon, S. (2020). Denoising diffusion implicit models. *arXiv preprint arXiv:2010.02502* [INDEX: 4].
