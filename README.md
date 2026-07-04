@@ -11,8 +11,9 @@ During the forward pass, a dataset sample is systematically degraded into pure G
 
 The algorithmic progression of denoising diffusion models has transitioned from highly latent pixel-space math to compressed latent vectors, ordinary differential equation (ODE) straight lines, and scalable multi-modal transformers.
 
+```mermaid
 [DDPM (Sohl-Dickstein, 2015)] ───> [Latent Diffusion (Rombach, 2022)] ───> [Flow Matching Transformers (2024-Present)](Slow Pixel-Space Sampling)           (Compressed VAE Latent Spaces)              (Straight-Line Scaling & Unified Patches)
-
+```
 
 *   **The Foundational Formulation Era (DDPM, Sohl-Dickstein et al., 2015 / Ho et al., 2020)**
     *   *Concept:* The structural baseline [INDEX: 4]. **Denoising Diffusion Probabilistic Models (DDPM)** formalized the discrete-time Markov chain framework. A convolutional **U-Net** backbone learned to predict the noise distribution added to raw image pixels at explicit time-steps [INDEX: 4].
@@ -29,17 +30,17 @@ The algorithmic progression of denoising diffusion models has transitioned from 
 
 The Diffusion family tree features specialized mathematical core modifications designed to optimize sampling speed, manage probability paths, and enable non-Markovian generation.
 
-### A. Denoising Diffusion Implicit Models (DDIM)
-*   **Mechanism:** Generalizes DDPM into a non-Markovian deterministic trajectory [INDEX: 4]. Because the generation path follows fixed mathematical equations rather than stochastic random walks, it allows the model to skip time-steps during inference [INDEX: 4].
-*   **Pros:** Drastically compresses generation latency, requiring only 20 to 50 steps to output crisp graphics instead of the 1,000 steps demanded by DDPM [INDEX: 4].
+- ### A. Denoising Diffusion Implicit Models (DDIM)
+	*   **Mechanism:** Generalizes DDPM into a non-Markovian deterministic trajectory [INDEX: 4]. Because the generation path follows fixed mathematical equations rather than stochastic random walks, it allows the model to skip time-steps during inference [INDEX: 4].
+	*   **Pros:** Drastically compresses generation latency, requiring only 20 to 50 steps to output crisp graphics instead of the 1,000 steps demanded by DDPM [INDEX: 4].
 
-### B. Score-Based Generative SDEs (Continuous Time)
-*   **Mechanism:** Popularized by Song et al [INDEX: 4]. It models the forward and reverse diffusion pathways as continuous-time Stochastic Differential Equations (SDEs), utilizing score matching to estimate the gradient of the log-probability density of the data [INDEX: 4].
-*   **Pros:** Provides a unified mathematical umbrella that links traditional diffusion models cleanly with score-based energy networks [INDEX: 4].
+- ### B. Score-Based Generative SDEs (Continuous Time)
+	*   **Mechanism:** Popularized by Song et al [INDEX: 4]. It models the forward and reverse diffusion pathways as continuous-time Stochastic Differential Equations (SDEs), utilizing score matching to estimate the gradient of the log-probability density of the data [INDEX: 4].
+	*   **Pros:** Provides a unified mathematical umbrella that links traditional diffusion models cleanly with score-based energy networks [INDEX: 4].
 
-### C. Flow Matching / Rectified Flow Models
-*   **Mechanism:** Replaces traditional curved Gaussian denoising trajectories with linear, straight ordinary differential equation (ODE) vector directions [INDEX: 4]. 
-*   **Pros:** Vastly accelerates convergence speed, allowing high-fidelity, single-turn, or 4-step real-time generation when combined with consistency distillation [INDEX: 4].
+- ### C. Flow Matching / Rectified Flow Models
+	*   **Mechanism:** Replaces traditional curved Gaussian denoising trajectories with linear, straight ordinary differential equation (ODE) vector directions [INDEX: 4]. 
+	*   **Pros:** Vastly accelerates convergence speed, allowing high-fidelity, single-turn, or 4-step real-time generation when combined with consistency distillation [INDEX: 4].
 
 ---
 
