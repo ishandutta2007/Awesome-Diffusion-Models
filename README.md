@@ -12,7 +12,10 @@ During the forward pass, a dataset sample is systematically degraded into pure G
 The algorithmic progression of denoising diffusion models has transitioned from highly latent pixel-space math to compressed latent vectors, ordinary differential equation (ODE) straight lines, and scalable multi-modal transformers.
 
 ```mermaid
-[DDPM (Sohl-Dickstein, 2015)] ───> [Latent Diffusion (Rombach, 2022)] ───> [Flow Matching Transformers (2024-Present)](Slow Pixel-Space Sampling)           (Compressed VAE Latent Spaces)              (Straight-Line Scaling & Unified Patches)
+flowchart LR
+    A["DDPM (Sohl-Dickstein et al., 2015)<br/>(Pixel-Space Diffusion Sampling)"]
+    --> B["Latent Diffusion (Rombach et al., 2022)<br/>(VAE Latent-Space Diffusion)"]
+    --> C["Flow Matching Transformers (2024–Present)<br/>(Flow-Based Transformer Generation)"]
 ```
 
 *   **The Foundational Formulation Era (DDPM, Sohl-Dickstein et al., 2015 / Ho et al., 2020)**
